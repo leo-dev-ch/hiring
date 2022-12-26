@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+#  apihiring:
+#    container_name: api
+#    image: api
+#    build: ./
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - dbhiring
+  dbhiring:
+    image: postgres:11
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_dbhiring:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=hiring
+volumes:
+  pg_dbhiring:

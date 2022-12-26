@@ -1,0 +1,13 @@
+spring:
+  ## PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hiring
+    username: postgres
+    password: postgres
+logging:
+  level:
+    com:
+      zaxxer:
+        hikari.HikariConfig: DEBUG
+        hikari: TRACE
+
