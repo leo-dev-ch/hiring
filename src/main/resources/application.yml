@@ -1,3 +1,4 @@
+---
 spring:
   jpa:
       show-sql: true
@@ -16,4 +17,4 @@ spring:
       maximumPoolSize: 5
 server:
   port: 8080
-
+---

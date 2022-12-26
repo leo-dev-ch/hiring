@@ -1,7 +1,7 @@
 spring:
   ## PostgreSQL
   datasource:
-    url: jdbc:postgresql://localhost:5432/hiring
+    url: jdbc:postgresql://localhost:5433/hiring
     username: postgres
     password: postgres
 logging:
