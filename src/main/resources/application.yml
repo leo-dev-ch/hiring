@@ -17,4 +17,22 @@ spring:
       maximumPoolSize: 5
 server:
   port: 8080
+
+#swagger
+springdoc:
+  swagger-ui:
+    path: swagger-ui
+    version:
+    title: HIRING
+    description: HIRING description
+    apiGroupName: hiring
+    contact:
+      name: HIRING
+      email: leo.garay9@gmail.com
+    licenseName: Apache 2.0
+    licenseUrl: https://www.apache.org/licenses/LICENSE-2.0.html
+    api-groups:
+      - public
+      - private
+
 ---

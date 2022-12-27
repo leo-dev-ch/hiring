@@ -31,6 +31,6 @@ public class InscripcionEntity {
     private UsuarioEntity usuario;
 
     @NotNull
-    @Column(name="fecha_inscripcion")
+    @Column(name = "fecha_inscripcion")
     private LocalTime fechaInscripcion;
 }

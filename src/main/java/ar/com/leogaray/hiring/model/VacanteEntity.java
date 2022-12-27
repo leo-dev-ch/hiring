@@ -1,26 +1,26 @@
 package ar.com.leogaray.hiring.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
+import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 @EqualsAndHashCode
 @Table(name = "vacantes")
 public class VacanteEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     @NotNull
+    @Size(max = 100)
     @Column(name = "nombre")
     private String nombre;
     @NotNull
@@ -28,7 +28,7 @@ public class VacanteEntity {
     private String descripcion;
     @NotNull
     @Column(name = "fecha")
-    private LocalDate fecha;
+    private LocalDateTime fecha;
 
     @Column(name = "salario")
     private long salario;

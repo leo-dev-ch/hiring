@@ -44,22 +44,6 @@ public class SwaggerConfiguration {
         SpringDocUtils.getConfig().replaceWithClass(DateTime.class, Date.class);
     }
 
-    private static ApiResponses getDefaultResponseMessages() {
-
-        ApiResponses apiResponses = new ApiResponses();
-        apiResponses
-                .addApiResponse("400", createExceptionResponse("Invalid Request (e.g. not nullable field is null)"));
-        apiResponses.addApiResponse("401", createExceptionResponse("Unauthorized"));
-        apiResponses.addApiResponse("403", createExceptionResponse("Forbidden"));
-        apiResponses.addApiResponse("404", createExceptionResponse("Application Not Found"));
-        apiResponses
-                .addApiResponse("410", createExceptionResponse("Application No Longer Available (i.e. deleted)"));
-        apiResponses
-                .addApiResponse("422", createExceptionResponse("Entity Referenced by ID in the Body was Not Found"));
-        apiResponses.addApiResponse("500", createExceptionResponse("Failure"));
-
-        return apiResponses;
-    }
 
     private static ApiResponses getDeleteResponseMessages() {
 
@@ -76,9 +60,7 @@ public class SwaggerConfiguration {
 
         MediaType mediaType = new MediaType();
         mediaType.schema(exceptionResponseSchema);
-        return new ApiResponse().description(message)
-                .content(new Content().addMediaType(
-                        org.springframework.http.MediaType.APPLICATION_JSON_VALUE, mediaType));
+        return new ApiResponse().description(message).content(new Content().addMediaType(org.springframework.http.MediaType.APPLICATION_JSON_VALUE, mediaType));
     }
 
     private static ApiResponse createEmptyResponse(String message) {
@@ -87,28 +69,20 @@ public class SwaggerConfiguration {
 
     @Bean
     public OpenAPI openAPI() {
-        return new OpenAPI()
-                .info(new Info()
-                        .title(this.title)
-                        .description(this.description)
-                        .termsOfService(this.termsOfServiceUrl)
-                        .contact(new Contact().name(this.contact))
-                        .license(new License().name(this.licenseName).url(this.licenseUrl))
-                        .version(this.version));
+        return new OpenAPI().info(new Info().title(this.title).description(this.description).termsOfService(this.termsOfServiceUrl).contact(new Contact().name(this.contact)).license(new License().name(this.licenseName).url(this.licenseUrl)).version(this.version));
     }
 
 
     @Bean
     public OperationCustomizer customResponses() {
-        ApiResponses defaultApiResponses = getDefaultResponseMessages();
+        // ApiResponses defaultApiResponses = getDefaultResponseMessages();
         ApiResponses deleteApiReponses = getDeleteResponseMessages();
 
         return (Operation operation, HandlerMethod handlerMethod) -> {
-            operation.getResponses().putAll(defaultApiResponses);
+            //operation.getResponses().putAll(defaultApiResponses);
             if (handlerMethod.hasMethodAnnotation(DeleteMapping.class)) {
                 operation.getResponses().putAll(deleteApiReponses);
             }
-
             return operation;
         };
     }

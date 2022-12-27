@@ -4,24 +4,25 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 @EqualsAndHashCode
 @Table(name = "categorias")
-class CategoriaEntity {
+public class CategoriaEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "categoria_seq", sequenceName = "categoria_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @NotNull
-    @Column(name="nombre")
+    @Column(name = "nombre")
     private String nombre;
 
-    @Column(name="descripcion")
+    @Column(name = "descripcion")
     private String descripcion;
 }
