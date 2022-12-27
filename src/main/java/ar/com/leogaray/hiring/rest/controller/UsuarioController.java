@@ -51,7 +51,7 @@ public class UsuarioController {
     @ResponseStatus(value = HttpStatus.CREATED)
     @Operation(summary = "Modifica un  Usuario")
     @Transactional
-    public UsuarioResponse modificar(@RequestBody @Valid UsuarioModificarRequest usuarioRequest) {
+    public UsuarioResponse modificar(@Valid @RequestBody UsuarioModificarRequest usuarioRequest) {
         UsuarioEntity usuario = usuarioService.modificarUsuario(usuarioConverter.toEntity(usuarioRequest));
         return converterService.convert(usuario, UsuarioResponse.class);
     }

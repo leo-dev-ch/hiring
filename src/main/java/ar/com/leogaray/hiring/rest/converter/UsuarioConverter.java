@@ -19,6 +19,6 @@ public class UsuarioConverter implements EntityConverter<UsuarioEntity, UsuarioC
     }
 
     public UsuarioEntity toEntity(UsuarioModificarRequest usuarioRequest) {
-        return UsuarioEntity.builder().id(usuarioRequest.getId()).username(usuarioRequest.getUsername()).nombre(usuarioRequest.getNombre()).email(usuarioRequest.getEmail()).build();
+        return UsuarioEntity.builder().id(usuarioRequest.getId()).nombre(usuarioRequest.getNombre()).email(usuarioRequest.getEmail()).build();
     }
 }

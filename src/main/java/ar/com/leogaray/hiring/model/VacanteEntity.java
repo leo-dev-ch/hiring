@@ -43,6 +43,7 @@ public class VacanteEntity {
     @Column(name = "estado")
     private EstadoVacante estado;
 
+    @NotNull
     @Column(name = "detalle")
     private String detalle;
 
