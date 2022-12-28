@@ -34,5 +34,8 @@ springdoc:
     api-groups:
       - public
       - private
+ApiNobelPrizeMasterData:
+  baseUrl: https://api.nobelprize.org/2.0
+  nobelPrize: /nobelPrize/{categoria}/{anio}
 
 ---
