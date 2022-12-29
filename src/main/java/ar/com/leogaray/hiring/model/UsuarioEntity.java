@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 
 @Entity
@@ -42,4 +43,8 @@ public class UsuarioEntity implements Serializable {
     @NotNull
     @Column(name = "fecha_registro")
     private LocalDateTime fechaRegistro;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "usuarios_role", joinColumns = {@JoinColumn(name = "usuario_id")}, inverseJoinColumns = {@JoinColumn(name = "rol_id")})
+    private Set<RolEntity> roles;
 }
