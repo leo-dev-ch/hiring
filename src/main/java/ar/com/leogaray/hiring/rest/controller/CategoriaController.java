@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -41,7 +40,6 @@ public class CategoriaController {
     @PostMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
     @Operation(summary = "Crea una categoria")
-    @Transactional
     public CategoriaResponse crear(@RequestBody @Valid CategoriaCrearRequest source) {
         CategoriaEntity categoriaEntity = categoriaService
                 .crear(converterService.convert(source, CategoriaEntity.class));
@@ -51,7 +49,6 @@ public class CategoriaController {
     @PutMapping(value = "/modificar", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.OK)
     @Operation(summary = "Modifica una categoria")
-    @Transactional
     public CategoriaResponse modificar(@RequestBody @Valid CategoriaModificarRequest source) {
         CategoriaEntity categoriaEntity = categoriaService
                 .modificar(converterService.convert(source, CategoriaEntity.class));

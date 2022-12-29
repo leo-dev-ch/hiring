@@ -17,4 +17,6 @@ public class UsuarioModificarRequest {
     @NotEmpty(message = "El email es requerido")
     @Email(message = "El email es inhabilido", flags = {Pattern.Flag.CASE_INSENSITIVE})
     private String email;
+    @NotEmpty(message = "El rol es requerido")
+    private Rol rol;
 }

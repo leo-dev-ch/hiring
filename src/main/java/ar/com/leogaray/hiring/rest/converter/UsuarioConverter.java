@@ -1,5 +1,6 @@
 package ar.com.leogaray.hiring.rest.converter;
 
+import ar.com.leogaray.hiring.model.Rol;
 import ar.com.leogaray.hiring.model.UsuarioEntity;
 import ar.com.leogaray.hiring.rest.model.UsuarioCrearRequest;
 import ar.com.leogaray.hiring.rest.model.UsuarioModificarRequest;
@@ -15,10 +16,12 @@ public class UsuarioConverter implements EntityConverter<UsuarioEntity, UsuarioC
 
     @Override
     public UsuarioEntity toEntity(UsuarioCrearRequest usuarioCrearRequest) {
-        return UsuarioEntity.builder().username(usuarioCrearRequest.getUsername()).password(usuarioCrearRequest.getPassword()).nombre(usuarioCrearRequest.getNombre()).email(usuarioCrearRequest.getEmail()).build();
+        Rol rol = Rol.valueOf(usuarioCrearRequest.getRol().name());
+        return UsuarioEntity.builder().username(usuarioCrearRequest.getUsername()).password(usuarioCrearRequest.getPassword()).nombre(usuarioCrearRequest.getNombre()).email(usuarioCrearRequest.getEmail()).rol(rol).build();
     }
 
     public UsuarioEntity toEntity(UsuarioModificarRequest usuarioRequest) {
-        return UsuarioEntity.builder().id(usuarioRequest.getId()).nombre(usuarioRequest.getNombre()).email(usuarioRequest.getEmail()).build();
+        Rol rol = Rol.valueOf(usuarioRequest.getRol().name());
+        return UsuarioEntity.builder().id(usuarioRequest.getId()).nombre(usuarioRequest.getNombre()).email(usuarioRequest.getEmail()).rol(rol).build();
     }
 }

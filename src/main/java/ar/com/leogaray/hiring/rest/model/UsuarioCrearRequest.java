@@ -15,6 +15,8 @@ public class UsuarioCrearRequest {
     @NotEmpty(message = "El email es requerido")
     @Email(message = "El email es inhabilido", flags = {Pattern.Flag.CASE_INSENSITIVE})
     private String email;
+    @NotNull(message = "El rol es requerido")
+    private Rol rol;
     @NotBlank(message = "La contraseña es requerida")
     private String password;
     @NotBlank(message = "La contraseña es requerida")
