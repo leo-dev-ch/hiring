@@ -20,7 +20,7 @@ public class NobelController {
 
     @GetMapping(value = "/{categoria}/{anio}")
     @ResponseStatus(value = HttpStatus.OK)
-    @Operation(summary = "-")
+    @Operation(summary = "busca nobel")
     public List<NobelPrize> get(@PathVariable CategoriaNobel categoria,
                                 @PathVariable Integer anio) {
 

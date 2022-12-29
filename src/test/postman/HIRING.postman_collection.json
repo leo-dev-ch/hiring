@@ -1,0 +1,1919 @@
+{
+  "info": {
+    "_postman_id": "c362f2ad-f72e-4cae-89a7-eaef7da71cf3",
+    "name": "HIRING",
+    "description": "HIRING description",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4077300"
+  },
+  "item": [
+    {
+      "name": "vacantes",
+      "item": [
+        {
+          "name": "Retorna una lista de vacantes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/vacantes/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "vacantes",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/vacantes/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "vacantes",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Crea una vacante",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"categoriaId\": 42604877,\n  \"descripcion\": \"reprehenderit c\",\n  \"detalle\": \"enim\",\n  \"estado\": \"INACTIVO\",\n  \"nombre\": \"aute magna nostrud Ut\",\n  \"salario\": -71050428,\n  \"destacado\": true,\n  \"imagen\": \"aute qui veniam\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/vacantes/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "vacantes",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"categoriaId\": 42604877,\n  \"descripcion\": \"reprehenderit c\",\n  \"detalle\": \"enim\",\n  \"estado\": \"INACTIVO\",\n  \"nombre\": \"aute magna nostrud Ut\",\n  \"salario\": -71050428,\n  \"destacado\": true,\n  \"imagen\": \"aute qui veniam\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/vacantes/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "vacantes",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": -25425103,\n  \"nombre\": \"sunt ut\",\n  \"descripcion\": \"ut in minim nulla\",\n  \"fecha\": \"1955-05-18T13:36:42.053Z\",\n  \"salario\": 47899509,\n  \"destacado\": false,\n  \"imagen\": \"nulla\",\n  \"estado\": \"ACTIVO\",\n  \"detalle\": \"laboris\",\n  \"categoria\": {\n    \"id\": -2232185,\n    \"nombre\": \"minim\",\n    \"descripcion\": \"et Excepteur ullamco\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Modifica una  Vacante",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"categoriaId\": 13770966,\n  \"descripcion\": \"nonconsequat \",\n  \"detalle\": \"eu irure anim\",\n  \"estado\": \"ACTIVO\",\n  \"id\": 84653901,\n  \"nombre\": \"dolor nulla dolor voluptate\",\n  \"salario\": -43421420,\n  \"destacado\": true,\n  \"imagen\": \"enim\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/vacantes/modificar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "vacantes",
+                "modificar"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"categoriaId\": 13770966,\n  \"descripcion\": \"nonconsequat \",\n  \"detalle\": \"eu irure anim\",\n  \"estado\": \"ACTIVO\",\n  \"id\": 84653901,\n  \"nombre\": \"dolor nulla dolor voluptate\",\n  \"salario\": -43421420,\n  \"destacado\": true,\n  \"imagen\": \"enim\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/vacantes/modificar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "vacantes",
+                    "modificar"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": -25425103,\n  \"nombre\": \"sunt ut\",\n  \"descripcion\": \"ut in minim nulla\",\n  \"fecha\": \"1955-05-18T13:36:42.053Z\",\n  \"salario\": 47899509,\n  \"destacado\": false,\n  \"imagen\": \"nulla\",\n  \"estado\": \"ACTIVO\",\n  \"detalle\": \"laboris\",\n  \"categoria\": {\n    \"id\": -2232185,\n    \"nombre\": \"minim\",\n    \"descripcion\": \"et Excepteur ullamco\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Busca un Vacante por su Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/vacantes/:vacanteId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "vacantes",
+                ":vacanteId"
+              ],
+              "variable": [
+                {
+                  "key": "vacanteId",
+                  "value": "-39878055",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/vacantes/:vacanteId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "vacantes",
+                    ":vacanteId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "vacanteId",
+                      "value": "-39878055",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Busca vacantes by example",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/vacantes/buscar?nombre=proident veniam in est dolore&detalle=proident veniam in est dolore&descripcion=proident veniam in est dolore&categoriaId=-64855888&estado=INACTIVO",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "vacantes",
+                "buscar"
+              ],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "proident veniam in est dolore",
+                  "description": "nombre"
+                },
+                {
+                  "key": "detalle",
+                  "value": "proident veniam in est dolore",
+                  "description": "detalle"
+                },
+                {
+                  "key": "descripcion",
+                  "value": "proident veniam in est dolore",
+                  "description": "descripcion"
+                },
+                {
+                  "key": "categoriaId",
+                  "value": "-64855888",
+                  "description": "categoriaId"
+                },
+                {
+                  "key": "estado",
+                  "value": "INACTIVO",
+                  "description": "estado"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/vacantes/buscar?nombre=proident veniam in est dolore&detalle=proident veniam in est dolore&descripcion=proident veniam in est dolore&categoriaId=-64855888&estado=INACTIVO",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "vacantes",
+                    "buscar"
+                  ],
+                  "query": [
+                    {
+                      "key": "nombre",
+                      "value": "proident veniam in est dolore"
+                    },
+                    {
+                      "key": "detalle",
+                      "value": "proident veniam in est dolore"
+                    },
+                    {
+                      "key": "descripcion",
+                      "value": "proident veniam in est dolore"
+                    },
+                    {
+                      "key": "categoriaId",
+                      "value": "-64855888"
+                    },
+                    {
+                      "key": "estado",
+                      "value": "INACTIVO"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Elimina un vacante",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/vacantes/eliminar?vacanteId=-39878055",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "vacantes",
+                "eliminar"
+              ],
+              "query": [
+                {
+                  "key": "vacanteId",
+                  "value": "-39878055",
+                  "description": "(Required) Vacante Id"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/vacantes/eliminar?vacanteId=-39878055",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "vacantes",
+                    "eliminar"
+                  ],
+                  "query": [
+                    {
+                      "key": "vacanteId",
+                      "value": "-39878055"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "usuarios",
+      "item": [
+        {
+          "name": "Retorna una lista de usuario",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/usuarios/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "usuarios",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Crea un  Usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"proident culpa consequat\",\n  \"nombre\": \"veniam nostrud velit\",\n  \"password\": \"nostrud adipi\",\n  \"passwordRepeat\": \"reprehenderit mollit anim\",\n  \"rol\": \"ADMIN\",\n  \"username\": \"aliq\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/usuarios/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "usuarios",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"proident culpa consequat\",\n  \"nombre\": \"veniam nostrud velit\",\n  \"password\": \"nostrud adipi\",\n  \"passwordRepeat\": \"reprehenderit mollit anim\",\n  \"rol\": \"ADMIN\",\n  \"username\": \"aliq\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": -56219597,\n  \"username\": \"Ut nulla\",\n  \"nombre\": \"velit labore\",\n  \"email\": \"dolor in\",\n  \"estado\": \"INACTIVO\",\n  \"rol\": \"USER\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Modifica un  Usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"fugiat mollit\",\n  \"id\": 28992736,\n  \"nombre\": \"reprehenderit id sit\",\n  \"rol\": \"ADMIN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/usuarios/modificar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "usuarios",
+                "modificar"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Created",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"fugiat mollit\",\n  \"id\": 28992736,\n  \"nombre\": \"reprehenderit id sit\",\n  \"rol\": \"ADMIN\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/modificar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    "modificar"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": -56219597,\n  \"username\": \"Ut nulla\",\n  \"nombre\": \"velit labore\",\n  \"email\": \"dolor in\",\n  \"estado\": \"INACTIVO\",\n  \"rol\": \"USER\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Busca un Usuario por su Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/usuarios/:usuarioId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "usuarios",
+                ":usuarioId"
+              ],
+              "variable": [
+                {
+                  "key": "usuarioId",
+                  "value": "-39878055",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/:usuarioId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    ":usuarioId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "usuarioId",
+                      "value": "-39878055",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Busca usuarios by example",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/usuarios/buscar?usuarioId=-39878055&username=proident veniam in est dolore&nombre=proident veniam in est dolore&estado=INACTIVO",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "usuarios",
+                "buscar"
+              ],
+              "query": [
+                {
+                  "key": "usuarioId",
+                  "value": "-39878055",
+                  "description": "Usuario Id"
+                },
+                {
+                  "key": "username",
+                  "value": "proident veniam in est dolore",
+                  "description": "username"
+                },
+                {
+                  "key": "nombre",
+                  "value": "proident veniam in est dolore",
+                  "description": "nombre"
+                },
+                {
+                  "key": "estado",
+                  "value": "INACTIVO",
+                  "description": "estado del"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/buscar?usuarioId=-39878055&username=proident veniam in est dolore&nombre=proident veniam in est dolore&estado=INACTIVO",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    "buscar"
+                  ],
+                  "query": [
+                    {
+                      "key": "usuarioId",
+                      "value": "-39878055"
+                    },
+                    {
+                      "key": "username",
+                      "value": "proident veniam in est dolore"
+                    },
+                    {
+                      "key": "nombre",
+                      "value": "proident veniam in est dolore"
+                    },
+                    {
+                      "key": "estado",
+                      "value": "INACTIVO"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Elimina un  Usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/usuarios/eliminar?usuarioId=-39878055",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "usuarios",
+                "eliminar"
+              ],
+              "query": [
+                {
+                  "key": "usuarioId",
+                  "value": "-39878055",
+                  "description": "(Required) Usuario Id"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/eliminar?usuarioId=-39878055",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    "eliminar"
+                  ],
+                  "query": [
+                    {
+                      "key": "usuarioId",
+                      "value": "-39878055"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "perfiles",
+      "item": [
+        {
+          "name": "Retorna una lista de perfiles",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/perfiles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "perfiles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/perfiles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "perfiles",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Crea un  Perfil",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"perfil\": \"fugiat esse in non\",\n  \"usuarioId\": -21927520\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/perfiles/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "perfiles",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"perfil\": \"fugiat esse in non\",\n  \"usuarioId\": -21927520\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/perfiles/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "perfiles",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": -77233221,\n  \"perfil\": \"exercitation sed\",\n  \"usuarios\": [\n    {\n      \"id\": 3601170,\n      \"username\": \"ullamco laborum nulla\",\n      \"nombre\": \"laboris tempor eiusmod aliquip\",\n      \"email\": \"cillum consectetur\",\n      \"estado\": \"INACTIVO\",\n      \"rol\": \"USER\"\n    },\n    {\n      \"id\": -67229560,\n      \"username\": \"Ut aliqua\",\n      \"nombre\": \"es\",\n      \"email\": \"laborum tempor Lorem exercitation\",\n      \"estado\": \"ACTIVO\",\n      \"rol\": \"USER\"\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Modifica un  Perfil",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": -19752895,\n  \"perfil\": \"qui nisi\",\n  \"usuarioId\": -55564000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/perfiles/modificar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "perfiles",
+                "modificar"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": -19752895,\n  \"perfil\": \"qui nisi\",\n  \"usuarioId\": -55564000\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/perfiles/modificar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "perfiles",
+                    "modificar"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": -77233221,\n  \"perfil\": \"exercitation sed\",\n  \"usuarios\": [\n    {\n      \"id\": 3601170,\n      \"username\": \"ullamco laborum nulla\",\n      \"nombre\": \"laboris tempor eiusmod aliquip\",\n      \"email\": \"cillum consectetur\",\n      \"estado\": \"INACTIVO\",\n      \"rol\": \"USER\"\n    },\n    {\n      \"id\": -67229560,\n      \"username\": \"Ut aliqua\",\n      \"nombre\": \"es\",\n      \"email\": \"laborum tempor Lorem exercitation\",\n      \"estado\": \"ACTIVO\",\n      \"rol\": \"USER\"\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Busca un Perfil por su Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/perfiles/:perfilId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "perfiles",
+                ":perfilId"
+              ],
+              "variable": [
+                {
+                  "key": "perfilId",
+                  "value": "-39878055",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/perfiles/:perfilId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "perfiles",
+                    ":perfilId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "perfilId",
+                      "value": "-39878055",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Elimina un perfil",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/perfiles/eliminar?perfilId=-39878055",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "perfiles",
+                "eliminar"
+              ],
+              "query": [
+                {
+                  "key": "perfilId",
+                  "value": "-39878055",
+                  "description": "(Required) Perfil Id"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/perfiles/eliminar?perfilId=-39878055",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "perfiles",
+                    "eliminar"
+                  ],
+                  "query": [
+                    {
+                      "key": "perfilId",
+                      "value": "-39878055"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "categorias",
+      "item": [
+        {
+          "name": "Retorna una lista de usuario",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/categorias/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categorias",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/categorias/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categorias",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Crea una categoria",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"velit deserun\",\n  \"descripcion\": \"ea elit in aute\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/categorias/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categorias",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Created",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nombre\": \"velit deserun\",\n  \"descripcion\": \"ea elit in aute\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/categorias/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categorias",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 56221413,\n  \"nombre\": \"elit cillum ipsum proident\",\n  \"descripcion\": \"in laborum cupidatat\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Modifica una categoria",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 9354051,\n  \"nombre\": \"officia Duis Lorem \",\n  \"descripcion\": \"consectetur incididunt in Duis\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/categorias/modificar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categorias",
+                "modificar"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 9354051,\n  \"nombre\": \"officia Duis Lorem \",\n  \"descripcion\": \"consectetur incididunt in Duis\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/categorias/modificar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categorias",
+                    "modificar"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 56221413,\n  \"nombre\": \"elit cillum ipsum proident\",\n  \"descripcion\": \"in laborum cupidatat\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Busca una categoria por su Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/categorias/:categoriaId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categorias",
+                ":categoriaId"
+              ],
+              "variable": [
+                {
+                  "key": "categoriaId",
+                  "value": "-64855888",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/categorias/:categoriaId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categorias",
+                    ":categoriaId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "categoriaId",
+                      "value": "-64855888",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Elimina una categoria",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/categorias/eliminar?categoriaId=-64855888",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categorias",
+                "eliminar"
+              ],
+              "query": [
+                {
+                  "key": "categoriaId",
+                  "value": "-64855888",
+                  "description": "(Required) Categoria Id"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/categorias/eliminar?categoriaId=-64855888",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categorias",
+                    "eliminar"
+                  ],
+                  "query": [
+                    {
+                      "key": "categoriaId",
+                      "value": "-64855888"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"password\": \"laboris incididunt ad tempor enim\",\n  \"username\": \"voluptate\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auth/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "OK",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "Added as a part of security scheme: bearer",
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"laboris incididunt ad tempor enim\",\n  \"username\": \"voluptate\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "*/*"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "-",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/nobel/:categoria/:anio",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "nobel",
+            ":categoria",
+            ":anio"
+          ],
+          "variable": [
+            {
+              "key": "categoria",
+              "value": "ECO",
+              "description": "(Required) "
+            },
+            {
+              "key": "anio",
+              "value": "-64855888",
+              "description": "(Required) "
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "OK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "description": "Added as a part of security scheme: bearer",
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/nobel/:categoria/:anio",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "nobel",
+                ":categoria",
+                ":anio"
+              ],
+              "variable": [
+                {
+                  "key": "categoria",
+                  "value": "ECO",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "anio",
+                  "value": "-64855888",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "*/*"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/health/",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "OK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "description": "Added as a part of security scheme: bearer",
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/health/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "health",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "*/*"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "<Bearer Token>",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}

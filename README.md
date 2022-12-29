@@ -33,7 +33,7 @@ Se deben ejecutar desde la terminal los siguientes comandos
 Se debe ejecutar el siguiente comando, ubicado en la raiz del proyecto. y levantar el proyecto utilizando el profile
 *dev*
 
-    $ docker-compose -f docker-compose-dev.yml up -d 
+    $ docker-compose up -d 
 
 ## Trabajando
 
