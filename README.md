@@ -20,15 +20,20 @@ En el archivo `application.yml` y `application-dev.yml` se encuentran las config
 
 ## Ejecución del proyecto
 
-Para desplegar el proyecto, se deben ejecutar desde la terminal o consola de windows los siguientes comandos
+### Perfil STG
+
+Se deben ejecutar desde la terminal los siguientes comandos
 
     $ cd proyecto
-    $ docker-compose up -d
+    $ chmod +x build.sh
+    $ build.sh
 
-Se debe ejecutar el siguiente comando, ubicado en la raiz del proyecto.
+### Perfil DEV
 
-    $ docker-compose up -d
-    $ mvn package -Dmaven.test.skip=true
+Se debe ejecutar el siguiente comando, ubicado en la raiz del proyecto. y levantar el proyecto utilizando el profile
+*dev*
+
+    $ docker-compose -f docker-compose-dev.yml up -d 
 
 ## Trabajando
 

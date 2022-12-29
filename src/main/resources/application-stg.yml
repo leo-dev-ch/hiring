@@ -1,12 +1,19 @@
+---
+
 spring:
   ## PostgreSQL
   datasource:
-    url: jdbc:postgresql://localhost:5433/hiring
+    url: jdbc:postgresql://dbhiring:5432/hiring
     username: postgres
     password: postgres
+
 logging:
   level:
     com:
       zaxxer:
         hikari.HikariConfig: DEBUG
         hikari: TRACE
+
+jwt:
+  secret-key: eyJhbGciOiJIUzUxMiJ9
+  expiration: 28800000
