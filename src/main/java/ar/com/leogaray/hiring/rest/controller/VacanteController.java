@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/vacantes")
 @AllArgsConstructor
 @Tag(name = "Vacantes")
+@PreAuthorize("hasRole('ADMIN')")
 public class VacanteController {
     private final ConverterService converterService;
     private final VacanteService vacanteService;
@@ -33,6 +35,7 @@ public class VacanteController {
     @GetMapping(value = "/")
     @ResponseStatus(value = HttpStatus.OK)
     @Operation(summary = "Retorna una lista de vacantes")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public List<VacanteResponse> getAll() {
         return vacanteService.getAll()
                 .stream()
@@ -43,6 +46,7 @@ public class VacanteController {
     @GetMapping(value = "/buscar")
     @ResponseStatus(value = HttpStatus.OK)
     @Operation(summary = "Busca vacantes by example")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public List<VacanteResponse> buscar(@Parameter(description = "nombre") @RequestParam(value = "nombre", required = false) String nombre,
                                         @Parameter(description = "detalle") @RequestParam(value = "detalle", required = false) String detalle,
                                         @Parameter(description = "descripcion") @RequestParam(value = "descripcion", required = false) String descripcion,

@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -23,6 +24,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/usuarios")
 @AllArgsConstructor
 @Tag(name = "Usuarios")
+@PreAuthorize("hasRole('ADMIN')")
 public class UsuarioController {
     private final ConverterService converterService;
     private final UsuarioConverter usuarioConverter;
