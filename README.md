@@ -25,15 +25,7 @@ En el archivo `application.yml` y `application-dev.yml` se encuentran las config
 Se deben ejecutar desde la terminal los siguientes comandos
 
     $ cd proyecto
-    $ chmod +x build.sh
-    $ build.sh
-
-### Perfil DEV
-
-Se debe ejecutar el siguiente comando, ubicado en la raiz del proyecto. y levantar el proyecto utilizando el profile
-*dev*
-
-    $ docker-compose up -d 
+    $ mvn spring-boot:run
 
 ## Trabajando
 

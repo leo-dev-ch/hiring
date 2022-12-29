@@ -12,6 +12,9 @@ spring:
   ## PostgreSQL
   datasource:
     driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:hiring
+    username: sa
+    password: password
     ## default connection pool
     hikari:
       connectionTimeout: 20000
@@ -39,4 +42,13 @@ ApiNobelPrizeMasterData:
   baseUrl: https://api.nobelprize.org/2.0
   nobelPrize: /nobelPrize/{categoria}/{anio}
 
+logging:
+  level:
+    com:
+      zaxxer:
+        hikari.HikariConfig: DEBUG
+        hikari: TRACE
+jwt:
+  secret-key: eyJhbGciOiJIUzUxMiJ9
+  expiration: 28800000
 ---
