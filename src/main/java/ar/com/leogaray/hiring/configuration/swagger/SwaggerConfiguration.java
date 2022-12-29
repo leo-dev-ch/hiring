@@ -1,6 +1,7 @@
 package ar.com.leogaray.hiring.configuration.swagger;
 
 import com.google.api.client.util.DateTime;
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.info.Contact;
@@ -11,6 +12,8 @@ import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -69,9 +72,12 @@ public class SwaggerConfiguration {
 
     @Bean
     public OpenAPI openAPI() {
-        return new OpenAPI().info(new Info().title(this.title).description(this.description).termsOfService(this.termsOfServiceUrl).contact(new Contact().name(this.contact)).license(new License().name(this.licenseName).url(this.licenseUrl)).version(this.version));
+        return new OpenAPI().addSecurityItem(new SecurityRequirement().addList("bearerAuth")).components(new Components().addSecuritySchemes("bearerAuth", new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").bearerFormat("JWT"))).info(getInfo());
     }
 
+    private Info getInfo() {
+        return new Info().title(this.title).description(this.description).termsOfService(this.termsOfServiceUrl).contact(new Contact().name(this.contact)).license(new License().name(this.licenseName).url(this.licenseUrl)).version(this.version);
+    }
 
     @Bean
     public OperationCustomizer customResponses() {
