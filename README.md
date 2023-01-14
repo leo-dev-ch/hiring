@@ -1,4 +1,4 @@
-# Hiring Challenge Ricoh
+# Hiring Challenge
 
 ### Documentacion
 
@@ -19,8 +19,6 @@ Dentro de los archivos extraídos;
 En el archivo `application.yml` y `application-dev.yml` se encuentran las configuraciones del proyecto por defecto.
 
 ## Ejecución del proyecto
-
-### Perfil STG
 
 Se deben ejecutar desde la terminal los siguientes comandos
 
